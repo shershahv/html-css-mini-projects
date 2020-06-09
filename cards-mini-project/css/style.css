@@ -19,11 +19,7 @@ body
   display: flex;
   
   justify-content: center;
-<<<<<<< HEAD
-  /* align-items: center; */
-=======
-  align-items: center;
->>>>>>> tempchanges
+  
   max-width: 800px;
   
 }

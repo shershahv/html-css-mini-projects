@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0%;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  background: linear-gradient(green 55%, white 50%);
+  justify-content: center;
+  align-items: center;
+}
+
+.container .card {
+  background-color: white;
+  height: 280px;
+  width: 240px;
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  box-shadow: 2px 2px 4px black;
+  overflow: hidden;
+  border-radius: 2%;
+}
+.container .card h1 {
+  font-size: 1.1rem;
+  padding-bottom: 10px;
+}
+i {
+  font-size: 4rem;
+  padding-bottom:10px ;
+  color:green;
+}

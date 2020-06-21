@@ -49,9 +49,11 @@ body {
 #navbar ul li a {
   text-decoration: none;
   padding: 1rem;
+  color:var(--bright-color)
 }
 #navbar ul li a:hover {
   background-color: white;
+  color: var(--dark-color);
 }
 #navbar .logo {
   color: white;

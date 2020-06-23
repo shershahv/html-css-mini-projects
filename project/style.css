@@ -96,7 +96,7 @@ body {
   text-align: center;
 }
 .form-container .form-item input {
-  padding: 1rem;
+  padding: 0.5rem;
   flex-basis: 250px;
   border: solid 1px var(--border-color);
 }
@@ -138,7 +138,7 @@ body {
 }
 .block textarea {
   display: block;
-  width: 90%;
+  max-width: 85%;
   border: solid 1px var(--border-color);
   font-family: Arial, Helvetica, sans-serif;
   padding: 1rem;
@@ -150,13 +150,18 @@ textarea::placeholder {
   text-align: right;
   padding: 2rem;
 }
-.btn button {
+.btn a {
   border: 2px solid var(--border-color);
   background: none;
   padding: 1rem;
   margin-right: 2rem;
   color: var(--primary-color);
 }
+
+.btn a:hover {
+  background-color: var(--primary-color);
+  color: var(--bright-color);
+} 
 
 /*  Added Items box */
 .box-1 {
@@ -165,38 +170,59 @@ textarea::placeholder {
 }
  .box-1 .box-container {
    display: Grid;
-   grid-template-columns: repeat(3, 1fr);
+   grid-template-columns: repeat(2, minmax(300px,1fr));
    grid-gap: 0.5rem;
    padding: 1rem;
+   overflow: auto;
  }
 .box-container .search-bar {
-  grid-column: 1 /span 3;
+  grid-column: 1 /span 2;
   margin: 1rem;
 }
 .search-bar label{
   background: var(--primary-color);
   padding: 1rem;
+  color: var(--bright-color);
 }
 .search-bar input {
   padding: 1rem;
   border: solid 1px var(--border-color);
+  width:400px;
 }
 .box-container .card {
-  width: 200px;
+  max-width: 250px;
+  height: 300px;
   padding: 1rem;
   background: var(--secondary-color);
-  box-shadow: 0.1px 0.1px 5px var(--primary-color);
+  color: var(--dark-color);
+  margin-bottom: 1rem;
 }
 .card ul {
   list-style: none;
 }
+.card ul li {
+  margin-top: 1rem;
+}
  .box-container .card .image img {
-  width:150px;
+  max-width:200px;
  }
   
 /* Media Queries */
-
-@media (max-width: 700px) {
+@media (max-width:1024px ){
+  .box-1 .box-container {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    
+  }
+  .box-container .search-bar {
+    grid-column: 1 /span 1;
+    margin: 1rem;
+  }
+  .search-bar input {
+    width: auto;
+  }
+}
+@media (max-width: 768px) {
   .container {
     flex-direction: column;
   }
@@ -229,33 +255,34 @@ textarea::placeholder {
     flex-direction: column;
     align-items: center;
   }
-  #navbar ul li {
   
-  }
   
   .box-1 .box-container {
     grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    align-items: center;
+    justify-items: center;
+    
   }
   .box-container .search-bar {
     grid-column: 1 /span 2;
     margin: 1rem;
+  }
+  .search-bar input {
+    width: auto;
   }
   #navbar {
     position: static;
   }
 }
 
-@media (max-width:400px) {
+@media (max-width:450px) {
   .box-container .search-bar {
     grid-column: 1 /span 1;
     margin: 1rem;
   }
   .box-1 .box-container {
     grid-template-columns: repeat(1, 1fr);
-    justify-content: center;
-    align-items: center;
+    justify-items: center;
+    
   }
 
   #navbar {
